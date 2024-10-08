@@ -1,0 +1,23 @@
+
+<header [class.hidden]="!headerVisible" class="bg-transparent text-white w-full flex justify-center items-center px-4 py-2 fixed top-0 z-40">
+  <div class="header-container max-w-6xl w-full flex justify-between items-center">
+    <img src="assets/images/logo.png" alt="Logo" class="h-32" routerLink="/">
+    <button id="menu-toggle" class="sm:hidden block" (click)="toggleMenu()">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"/>
+      </svg>
+    </button>
+    <nav [class.hidden]="!isMenuOpen" class="absolute sm:relative sm:flex flex-col sm:flex-row top-full w-full left-0 bg-gray-900 sm:bg-transparent">
+      <ul class="flex flex-col sm:flex-row justify-between items-center w-full">
+        <li><a routerLink="/" class="block px-4 py-2 hover:text-gray-300">Início</a></li>
+        <li><a routerLink="/projects" class="block px-4 py-2 hover:text-gray-300">Projetos</a></li>
+        <li><a routerLink="/services" class="block px-4 py-2 hover:text-gray-300">Serviços</a></li>
+        <li><a routerLink="/about" class="block px-4 py-2 hover:text-gray-300">Sobre Nós</a></li>
+        <li><a routerLink="/contact" class="block px-4 py-2 hover:text-gray-300">Contato</a></li>
+        <!-- <li><a href="#" class="block px-4 py-2 hover:text-gray-300">Blog</a></li> -->
+        <!-- <li><a href="#" class="block px-4 py-2 hover:text-gray-300">Política de Privacidade</a></li> -->
+        <!-- Other links -->
+      </ul>
+    </nav>
+  </div>
+</header>

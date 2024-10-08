@@ -1,0 +1,22 @@
+<div class="relative">
+    <div class="flex overflow-x-auto snap-x snap-mandatory hide-scroll-bar" #carouselContainer>
+        <div class="snap-start flex-shrink-0 p-4" *ngFor="let tech of technologies">
+            <div class="card">
+                <div class="card-content">
+                    <img [src]="tech.iconPath" alt="{{ tech.name }}" class="mx-auto w-20 h-20">
+                    <div class="text-center mt-4">
+                        <h3 class="font-bold">{{ tech.name }}</h3>
+                        <p>{{ tech.description }}</p>
+                    </div>
+                </div>
+                <a href="{{ tech.learnMoreLink }}" class="inline-block">Saiba Mais</a>
+            </div>
+        </div>
+    </div>
+    <button class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black text-teal-200 p-2 rounded-full shadow" (click)="previousSlide()">
+      <i class="gtn gtn-arrow-left-light"></i>
+    </button>
+    <button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black text-teal-200 p-2 rounded-full shadow" (click)="nextSlide()">
+        <i class="gtn gtn-arrow-right-light"></i>
+    </button>
+</div>

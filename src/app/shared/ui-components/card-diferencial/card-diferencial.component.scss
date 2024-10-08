@@ -1,0 +1,52 @@
+.card {
+    background-color: #111827;
+    .icon {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    .line {
+        width: 4rem; // Largura da linha
+        border-bottom: 2px solid #66FCF1;; // Substitua pela cor desejada
+        padding-bottom: 0.5rem;
+    }
+    p{
+        position: relative;
+        font-size: 1rem;
+    }
+    &:hover{
+        border: 2px solid #66FCF1;;
+    }
+    @media (max-width: 640px){
+        p {
+            top: 0rem; 
+        }
+    }
+  }
+.card-active {
+    background-color: #111827;
+    border: 2px solid #66FCF1;;
+    .icon {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    .line {
+        width: 4rem; // Largura da linha
+        border-bottom: 2px solid #66FCF1;; // Substitua pela cor desejada
+        padding-bottom: 0.5rem;
+    }
+    p{
+        position: relative;
+        font-size: 1rem;
+    }
+    @media (max-width: 640px){
+        p {
+            top: 0rem; 
+        }
+    }
+  }
+  
+  

@@ -1,0 +1,21 @@
+<div *ngIf="active == 'true'" class="card-active bg-gray-900 text-white p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300 min-h-96 w-96 rounded-sm">
+    <div class="min-h-6"></div>
+    <div class="icon text-3xl text-teal-400">
+        <i [class]="icone"></i>
+    </div>
+    <div class="min-h-6"></div>
+    <h3 class="text-lg font-bold mt-4 mb-2">{{ titulo }}</h3>
+    <div class="min-h-6"></div>
+    <p>{{ descricao }}</p>
+</div>
+<div *ngIf="active == 'false'" class="card bg-gray-900 text-white p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300 min-h-96 w-96 rounded-sm">
+    <div class="min-h-6"></div>
+    <div class="icon text-3xl text-teal-400">
+        <i [class]="icone"></i>
+    </div>
+    <div class="min-h-6"></div>
+    <h3 class="text-lg font-bold mt-4 mb-2">{{ titulo }}</h3>
+    <div class="min-h-6"></div>
+    <p>{{ descricao }}</p>
+</div>
+  

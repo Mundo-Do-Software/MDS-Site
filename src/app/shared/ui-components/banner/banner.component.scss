@@ -1,0 +1,9 @@
+.banner-background {
+    background: url('../../../../../src/assets/images/tech-background.png') no-repeat center center;
+    background-size: cover; // Garante que a imagem cubra completamente o container
+    width: 100%; // Assegura que o background ocupa a largura total
+
+    .text-blue-light {
+      color: #66FCF1;
+    }
+  }

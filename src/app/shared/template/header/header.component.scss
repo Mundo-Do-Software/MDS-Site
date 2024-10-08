@@ -1,0 +1,62 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 40;
+  padding: 0.5rem 1rem;
+  transition: top 0.3s;
+  &.hidden {
+    top: -100%; // Esconde o cabeçalho ao rolar para baixo
+  }
+  .header-container {
+    max-width: 1200px; // ou outra largura máxima conforme necessário
+    width: 100%;
+    margin: 0 auto; // Centraliza o container
+    display: flex;
+    justify-content: space-between; // Espaça igualmente o logo e o menu
+    align-items: center;
+  }
+
+  nav {
+    @media (max-width: 640px) {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.9); // Fundo mais visível para mobile
+    }
+    
+    @media (min-width: 641px) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    @media (min-width: 641px) {
+      flex-direction: row;
+      justify-content: center; // Centraliza os itens no menu
+    }
+  }
+
+  li {
+    a {
+      padding: 10px 12px; // Reduz o padding horizontal para aproximar os itens
+      color: white;
+      text-decoration: none;
+      display: block;
+
+      &:hover {
+        color: #66FCF1;
+      }
+    }
+  }
+}

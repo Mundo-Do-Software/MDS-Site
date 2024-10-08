@@ -1,0 +1,44 @@
+<div class="bg-black text-white rounded-lg shadow-lg overflow-hidden w-80 border-2 border-teal-200 hover:shadow-xl hover:scale-105 transition-transform duration-300 animate-slide-in" 
+     [ngClass]="{ 'bg-teal-200 text-black scale-105': isActive, 'bg-black text-white': !isActive }" 
+     (click)="openModal()">
+    <img [src]="imageUrl" [alt]="imageAlt" class="w-full h-48 object-cover">
+    <div class="p-6">
+      <h3 class="text-2xl font-bold mb-2" 
+          [ngClass]="isActive ? 'text-black' : 'text-teal-200'">{{ title }}</h3>
+      <p class="mb-4" 
+         [ngClass]="isActive ? 'text-black' : 'text-gray-400'">{{ description | slice:0:100 }}...</p>
+      <button
+        class="inline-block px-4 py-2 border-2 text-lg font-semibold leading-tight uppercase rounded transition-colors duration-300"
+        [ngClass]="{
+          'border-teal-200 text-teal-200 hover:bg-teal-200 hover:text-black': !isActive,
+          'border-black text-black hover:bg-black hover:text-teal-200 hover:border-teal-200': isActive
+        }"
+        (click)="$event.stopPropagation(); openModal()"
+      >
+        Saiba Mais
+      </button>
+    </div>
+</div>
+
+
+
+<div *ngIf="isModalOpen" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 p-4 md:p-0">
+  <div class="bg-gray-900 text-white rounded-lg w-full md:w-1/2 max-h-screen p-6 relative overflow-auto modal-content">
+    <button class="absolute top-2 right-2 text-white" (click)="closeModal()">&times;</button>
+    <h2 class="text-3xl font-bold mb-4">{{ title }}</h2>
+    <div *ngFor="let paragraph of modalContent" class="mb-4">
+      <p>{{ paragraph }}</p>
+    </div>
+    <div class="container mx-auto px-4 py-8 items-center justify-center min-h-20">
+      <a href="https://wa.me/5541985075085" target="_blank" 
+         class="'inline-block px-6 py-3 border-2 border-teal-200 text-teal-200 font-semibold text-lg leading-tight uppercase rounded hover:bg-teal-200 hover:text-black transition-colors duration-300">
+        Comece já
+      </a>
+    </div>
+    <!-- Botão Comece Já -->
+    <img [src]="imageUrl" [alt]="imageAlt" class="w-full h-64 object-cover mb-4">
+    
+  </div>
+</div>
+
+

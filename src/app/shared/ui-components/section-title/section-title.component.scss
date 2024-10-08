@@ -1,0 +1,33 @@
+
+
+  .title-container {
+    position: relative;
+    text-align: left;
+    color: #fff;
+    font-weight: bold;
+  
+    .section-title {
+      font-size: 3rem;
+      position: relative; // Importante para o posicionamento do pseudo-elemento
+      padding-left: 4.5rem; // Espaço para a linha decorativa
+  
+      // Adicionando a linha antes do título
+      &::before {
+        content: ''; // Necessário para pseudo-elementos
+        position: absolute;
+        left: 0;
+        top: 50%; // Centraliza verticalmente
+        transform: translateY(-50%); // Ajuste fino da posição vertical
+        width: 4rem; // Largura da linha
+        height: 2px; // Altura da linha
+        background-color: #66FCF1;// Cor da linha
+        margin-right: 10px; // Espaço entre a linha e o texto
+      }
+    }
+  
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: #66FCF1;
+    }
+  }
+  

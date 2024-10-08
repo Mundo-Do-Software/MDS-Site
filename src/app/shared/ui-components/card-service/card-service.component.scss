@@ -1,0 +1,57 @@
+.card {
+    background-color: #111827;
+    border-bottom: 5px solid #fff;
+    
+    .icon {
+        font-size: 2.5rem;
+    }
+    h3 {
+        padding-bottom: 0.5rem;
+        font-size: 1.5rem;
+    }
+    p{
+
+        font-size: 1rem;
+    }
+    &:hover{
+        border-bottom: 5px solid #66FCF1;;
+    }
+    @media (max-width: 1536px){
+        
+    }
+    @media (max-width: 640px){
+        p {
+            top: 0rem; 
+        }
+    }
+  }
+.card-active {
+    background-color: #66FCF1;;
+    border-bottom: 5px solid #fff;
+    .icon {
+        font-size: 2.5rem;
+        color: #111827;
+    }
+    h3 {
+        padding-bottom: 0.5rem;
+        font-size: 1.5rem;
+        color: #111827;
+    }
+    p{
+
+        font-size: 1rem;
+        color: #111827;
+    }
+    &:hover{
+        border-bottom: 5px solid #66c0fc;;
+    }
+    @media (max-width: 1536px){
+        
+    }
+    @media (max-width: 640px){
+        p {
+            top: 0rem; 
+        }
+    }
+  }
+  

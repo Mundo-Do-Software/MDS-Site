@@ -1,0 +1,47 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #64d5ca; /* Teal-200 */
+    color: black;
+    padding: 24px;
+    shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 288px; /* 72 rem */
+    min-height: 384px; /* 96 rem */
+    transition: background-color 300ms;
+    position: relative;
+}
+
+.card-content {
+    flex-grow: 1; /* Faz o conteúdo crescer para ocupar o espaço disponível */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espaça o conteúdo e o botão */
+}
+
+.card img {
+    width: 80px; /* 20 rem */
+    height: 80px; /* 20 rem */
+    margin: auto; /* Centraliza a imagem horizontalmente */
+}
+
+.card .text-center {
+    margin-top: 16px; /* Espaço entre a imagem e o texto */
+}
+
+.card a {
+    margin-top: auto; /* Empurra o link para a parte inferior */
+    padding: 12px 24px;
+    border: 2px solid black;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    transition: color 300ms, background-color 300ms;
+    text-decoration: none; /* Remove o sublinhado */
+    align-self: center; /* Centraliza o botão horizontalmente */
+}
+
+.card a:hover {
+    background-color: black;
+    color: #64d5ca; /* Teal-200 */
+}

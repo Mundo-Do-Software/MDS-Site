@@ -1,0 +1,36 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    align-items: start; // Assegura que as colunas comecem no mesmo nível
+
+    @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr; // Distribuição igual das colunas
+    }
+
+    .relative {
+        position: relative;
+        overflow: hidden; // Previne que o conteúdo exceda o espaço do container
+        height: 100%; // Ajuste para manter a altura baseada no conteúdo
+    }
+
+    .img-left {
+        width: 100%; // Garante que a imagem preencha a largura do container
+        height: auto; // Mantém a proporção original da imagem
+        max-height: 716px; // Limita a altura da imagem para evitar que fique muito grande
+    }
+    .img-right {
+        width: 100%; // Garante que a imagem preencha a largura do container
+        height: auto; // Mantém a proporção original da imagem
+        max-height: 350px; // Limita a altura da imagem para evitar que fique muito grande
+    }
+
+    .text-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); // Centraliza o texto na imagem
+        color: white;
+        text-shadow: 0px 0px 10px rgba(0,0,0,0.7); // Melhora a legibilidade do texto
+    }
+}

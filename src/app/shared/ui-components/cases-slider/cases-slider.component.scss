@@ -1,0 +1,10 @@
+::ng-deep .my-custom-scrollbar .scroll-container::-webkit-scrollbar-thumb {
+    background: repeating-linear-gradient(
+      45deg,
+      teal-200,
+      teal-200 1px,
+      transparent 1px,
+      transparent 4px
+    );
+  }
+  
