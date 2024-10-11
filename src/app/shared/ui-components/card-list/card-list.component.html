@@ -1,0 +1,26 @@
+<div *ngFor="let card of cards; let i = index" class="relative mb-4">
+    <!-- Contêiner externo para ambos os lados do card -->
+    <div class="w-full flex flex-col md:flex-row items-stretch" [ngClass]="i % 2 === 1 ? 'md:flex-row-reverse' : ''">
+      
+      <!-- Ícone, Título e Botão (lado superior em mobile e esquerdo/direito em desktop) -->
+      <div class="bg-teal-200 text-black p-6 flex flex-col justify-between w-full md:w-1/2">
+        <div class="text-center">
+          <i [class]="card.icon" class="text-4xl mb-4"></i>
+          <h3 class="text-2xl font-bold">{{ card.title }}</h3>
+        </div>
+        <div class="text-center mt-4">
+          <a [href]="card.link" target="_blank" class="inline-block px-6 py-3 border-2 bg-gray-900 border-teal-200 text-teal-200 font-semibold text-lg leading-tight uppercase transition-colors duration-300 hover:bg-teal-200 hover:text-black hover:border-gray-900">
+            {{ card.buttonText }}
+          </a>
+        </div>
+      </div>
+      
+      <!-- Descrição (lado inferior em mobile e direito/esquerdo em desktop) -->
+      <div class="bg-gray-900 text-white p-6 w-full md:w-1/2 flex items-center">
+        <div>
+          <p class="text-justify">{{ card.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,9 +1,38 @@
 .banner-background {
-    background: url('../../../../../src/assets/images/tech-background.png') no-repeat center center;
-    background-size: cover; // Garante que a imagem cubra completamente o container
-    width: 100%; // Assegura que o background ocupa a largura total
+  background-color: black;
+  background: url('../../../../../src/assets/images/Banners/14.png') no-repeat center center;
+  background-size: cover; 
+  width: 100%;
+  position: relative; /* Para garantir que o overlay fique dentro do container */
+
+  .text-blue-light {
+      color: #66FCF1;
+  }
+}
+
+@media (max-width: 1000px) {
+  .banner-background {
+    background-color: black;
+    background: url('../../../../../src/assets/images/Banners/15.png') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6); /* Overlay semi-transparente */
+  }
+
+  .text-content {
+      position: relative; /* Para que o texto fique acima do overlay */
+      z-index: 1;
+  }
 
     .text-blue-light {
       color: #66FCF1;
     }
   }
+}
