@@ -68,7 +68,7 @@
         <div>
             <img src="./assets/images/iVertion/iVertion-interacoes.png" alt="iVertion CRM Interações" class="w-96 h-auto object-cover img-left">
         </div>
-</div>
+    </div>
     <div class="min-h-10"></div>
     <div class="grid justify-items-center">
         <a href="https://wa.me/5541985075085?text=Ol%C3%A1,%20gostaria%20de%20conhecer%20mais%20sobre%20o%20iVertion%20CRM" target="_blank" class="inline-block w-80 px-6 py-3 border-2 border-teal-200 text-teal-200 font-semibold text-lg leading-tight uppercase rounded hover:bg-teal-200 hover:text-black transition-colors duration-300">
@@ -103,6 +103,32 @@
             icone="gtn gtn-speed-light"
         >
         </app-card-diferencial>
+        <app-card-diferencial
+            titulo="Acompanhamento de Pipeline"
+            descricao="Visualize o funil de vendas, desde os leads capturados até as oportunidades fechadas."
+            active="true"
+            icone="gtn gtn-funnel-dollar-solid"
+        >
+        </app-card-diferencial>
+        <div>
+            <img src="./assets/images/iVertion/iVertion-funil.png" alt="iVertion CRM Dashboard" class="w-96 h-auto object-cover img-left">
+        </div>
+        <div>
+            <img src="./assets/images/iVertion/iVertion-kpi.png" alt="iVertion CRM Dashboard" class="w-96 h-auto object-cover img-left">
+        </div>
+        <app-card-diferencial
+            titulo="Insights Rápidos"
+            descricao="Identifique rapidamente quais etapas do funil precisam de atenção e quais vendedores estão se destacando."
+            active="false"
+            icone="gtn gtn-pie-chart-light"
+        >
+        </app-card-diferencial>
+    </div>
+    <div class="min-h-10"></div>
+    <div class="grid justify-items-center">
+        <a href="https://wa.me/5541985075085?text=Ol%C3%A1,%20gostaria%20de%20conhecer%20mais%20sobre%20o%20iVertion%20CRM" target="_blank" class="inline-block w-80 px-6 py-3 border-2 border-teal-200 text-teal-200 font-semibold text-lg leading-tight uppercase rounded hover:bg-teal-200 hover:text-black transition-colors duration-300">
+            Solicitar Demonstração
+        </a>
     </div>
 </app-black-background>
 
@@ -112,19 +138,31 @@
         <div class="container">
             <div class="min-h-10"></div>
             <app-section-title
-                title="Solicite uma Demonstração"
-                subtitle="Conheça o iVertion na prática"
+                title="Automação de Tarefas"
+                subtitle="FOQUE NO QUE REALMENTE IMPORTA"
             ></app-section-title>
             <div class="min-h-10"></div>
             <p class="text-justify mx-8">
-                Quer ver como o iVertion pode transformar sua empresa? Solicite uma demonstração e descubra todas as funcionalidades que fazem do iVertion o CRM ideal para o seu negócio. Nossa equipe está pronta para oferecer uma visão detalhada de como podemos ajudar sua empresa a crescer.
+                A automação de tarefas é uma das funcionalidades que mais trazem eficiência para sua equipe. O iVertion permite automatizar processos como:
             </p>
-            <div class="text-center mt-4">
-                <a href="https://wa.me/5541985075085?text=Ol%C3%A1,%20gostaria%20de%20conhecer%20mais%20sobre%20o%20iVertion%20CRM" target="_blank" class="inline-block px-6 py-3 border-2 border-teal-200 text-teal-200 font-semibold text-lg leading-tight uppercase rounded hover:bg-teal-200 hover:text-black transition-colors duration-300">
-                    Solicitar Demonstração
-                </a>
-            </div>
         </div>
+    </div>
+    <div class="grid justify-items-center">
+        <div class="w-1/2 min-[300]:w-full">
+            <img src="./assets/images/Banners/17.png" alt="iVertion Workflow" class="w-full h-auto object-cover justify-self-center">
+        </div>
+    </div>
+    <div class="container mx-auto px-4 py-8">
+        <div class="container">
+            <div class="min-h-10"></div>
+            <app-card-list-values [cards]="cardsWorkflowData"></app-card-list-values>
+        </div>
+    </div>
+    <div class="min-h-10"></div>
+    <div class="grid justify-items-center">
+        <a href="https://wa.me/5541985075085?text=Ol%C3%A1,%20gostaria%20de%20conhecer%20mais%20sobre%20o%20iVertion%20CRM" target="_blank" class="inline-block w-80 px-6 py-3 border-2 border-teal-200 text-teal-200 font-semibold text-lg leading-tight uppercase rounded hover:bg-teal-200 hover:text-black transition-colors duration-300">
+            Solicitar Demonstração
+        </a>
     </div>
 </app-dark-gray-background>
 
@@ -134,14 +172,67 @@
         <div class="container">
             <div class="min-h-10"></div>
             <app-section-title
-                title="O que Nossos Clientes Dizem"
-                subtitle="Depoimentos de empresas que já utilizam o iVertion"
+                title="Relatórios Personalizados"
+                subtitle="TENHA O CONTROLE TOTAL"
             ></app-section-title>
             <div class="min-h-10"></div>
-            <ul class="list-disc mx-8">
-                <li>“O iVertion nos ajudou a aumentar nossa eficiência em 30% e organizar completamente o nosso processo de vendas!” – Empresa A</li>
-                <li>“Com o iVertion, nossa equipe de vendas se tornou mais produtiva e conseguimos alcançar nossas metas com maior facilidade.” – Empresa B</li>
-            </ul>
+            <p class="text-justify mx-8">
+                Com o iVertion CRM, você pode gerar relatórios personalizados que ajudam a entender o desempenho do time de vendas, identificar gargalos e prever resultados:
+            </p>
+            <div class="min-h-10"></div>
         </div>
     </div>
+    <div class="container mx-auto px-0 grid justify-items-center md:grid-cols-3 gap-10">
+        <app-card-service
+        titulo="Relatórios de Desempenho"
+        descricao="Avalie o desempenho de cada vendedor ou de toda a equipe."
+        icone="gtn gtn-man-light"
+        active="true"
+        >
+        </app-card-service>
+        <app-card-service
+        titulo="Análise de Funil de Vendas"
+        descricao="Entenda onde os leads estão sendo perdidos e quais oportunidades estão mais próximas de se converterem em vendas."
+        icone="gtn gtn-funnel-light"
+        active="false"
+        >
+        </app-card-service>
+        <app-card-service
+        titulo="Relatórios Financeiros"
+        descricao="Veja o impacto financeiro das suas operações de vendas, com detalhes de faturamento e comissões."
+        icone="gtn gtn-line-chart1-light"
+        active="true"
+        >
+        </app-card-service>
+    </div>
+    <div class="min-h-10"></div>
+    <div class="grid justify-items-center">
+        <a href="https://wa.me/5541985075085?text=Ol%C3%A1,%20gostaria%20de%20conhecer%20mais%20sobre%20o%20iVertion%20CRM" target="_blank" class="inline-block w-80 px-6 py-3 border-2 border-teal-200 text-teal-200 font-semibold text-lg leading-tight uppercase rounded hover:bg-teal-200 hover:text-black transition-colors duration-300">
+            Solicitar Demonstração
+        </a>
+    </div>
 </app-black-background>
+<app-dark-gray-background>
+    <div class="container mx-auto px-4 py-8">
+        <div class="container">
+            <div class="min-h-10"></div>
+            <app-section-title
+                title="Conclusão"
+            ></app-section-title>
+            <div class="min-h-10"></div>
+            <p class="text-justify mx-8">
+                O iVertion CRM é a solução ideal para empresas que buscam uma plataforma completa para gerenciar vendas e relacionamentos com clientes de forma eficaz. Com ferramentas que simplificam e automatizam processos, além de relatórios precisos, você terá todas as informações necessárias para tomar decisões estratégicas e impulsionar o crescimento do seu negócio.
+            </p>
+            <div class="min-h-10"></div>
+        </div>
+    </div>
+    <div class="grid justify-items-center">
+        <p class="text-justify mx-8">
+            Tenha tudo isso e muito mais, faça uma demonstração sem compromisso!
+        </p>
+        <div class="min-h-10"></div>
+        <a href="https://wa.me/5541985075085?text=Ol%C3%A1,%20gostaria%20de%20conhecer%20mais%20sobre%20o%20iVertion%20CRM" target="_blank" class="inline-block w-80 px-6 py-3 border-2 border-teal-200 text-teal-200 font-semibold text-lg leading-tight uppercase rounded hover:bg-teal-200 hover:text-black transition-colors duration-300">
+            Solicitar Demonstração
+        </a>
+    </div>
+</app-dark-gray-background>
