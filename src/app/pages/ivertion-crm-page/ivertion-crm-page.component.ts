@@ -15,21 +15,21 @@ import { CardDiferencialComponent } from "../../shared/ui-components/card-difere
   styleUrl: './ivertion-crm-page.component.scss'
 })
 export class IvertionCrmPageComponent {
-  cardsLeadsData = [
+  cardsWorkflowData = [
     {
-      icon: 'gtn gtn-sms-solid',
-      title: 'Captação de Leads',
-      description: 'Importe leads de diferentes fontes, como e-mail, formulários de contato ou redes sociais.',
+      icon: 'gtn gtn-email-light',
+      title: 'Follow-ups Automáticos',
+      description: 'Configure lembretes e envios automáticos de e-mails para leads e clientes.',
     },
     {
-      icon: 'gtn gtn-star-half-alt-solid',
-      title: 'Classificação de Leads',
+      icon: 'gtn gtn-robot-solid',
+      title: 'Atualizações Automáticas',
       description: 'Avalie e qualifique seus leads automaticamente com base em critérios personalizáveis.',
     },
     {
-      icon: 'gtn gtn-funnel-dollar-solid',
-      title: 'Acompanhamento de Interações',
-      description: 'Registre cada interação com o lead, como e-mails, telefonemas ou reuniões, para que você saiba exatamente em que ponto do funil ele está.',
+      icon: 'gtn gtn-team-2-line',
+      title: 'Distribuição de Leads',
+      description: 'Automatize a distribuição de leads entre os membros da equipe, com base na carga de trabalho ou na especialidade de cada um.',
     },
   ];
 }
