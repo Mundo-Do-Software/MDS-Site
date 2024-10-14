@@ -12,5 +12,23 @@
 </head>
 <body>
   <app-root></app-root>
+
+  <script type="text/javascript">
+    window.chatwootSettings = {"position":"right","type":"standard","launcherTitle":"Fale com a gente"};
+    (function(d,t) {
+      var BASE_URL="https://chatwoot.mundodosoftware.com.br/";
+      var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=BASE_URL+"/packs/js/sdk.js";
+      g.defer = true;
+      g.async = true;
+      s.parentNode.insertBefore(g,s);
+      g.onload=function(){
+        window.chatwootSDK.run({
+          websiteToken: 'BsL1dyKkBrDA2WoEdqt7Uavj',
+          baseUrl: BASE_URL
+        })
+      }
+    })(document,"script");
+  </script>
 </body>
 </html>
