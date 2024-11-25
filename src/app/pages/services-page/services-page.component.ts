@@ -3,7 +3,6 @@ import { BannerPageComponent } from "../../shared/ui-components/banner-page/bann
 import { BlackBackgroundComponent } from "../../shared/ui-components/black-background/black-background.component";
 import { SectionTitleComponent } from "../../shared/ui-components/section-title/section-title.component";
 import { CardListComponent } from "../../shared/ui-components/card-list/card-list.component";
-import { link } from 'fs';
 
 @Component({
   selector: 'app-services-page',
