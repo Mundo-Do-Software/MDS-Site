@@ -26,7 +26,10 @@ jobs:
     - name: Build Angular Project
       run: npm run build -- --configuration production
 
-    - name: Deploy
+    - name: Deploy and Restart PM2
       run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
-        ssh -i ${{ secrets.SSH_PRIVATE_KEY }} username@${{ secrets.SERVER_IP }} 'pm2 restart AngularApp'
+        ssh -i ~/.ssh/id_rsa username@${{ secrets.SERVER_IP }} 'pm2 restart AngularApp'
