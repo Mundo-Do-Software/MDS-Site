@@ -6,7 +6,6 @@ import { DarkGrayBackgroundComponent } from "../../shared/ui-components/dark-gra
 import { CardListComponent } from "../../shared/ui-components/card-list/card-list.component";
 import { CardListValuesComponent } from "../../shared/ui-components/card-list-values/card-list-values.component";
 import { SectionTitleCenterComponent } from "../../shared/ui-components/section-title-center/section-title-center.component";
-import { title } from 'node:process';
 
 @Component({
   selector: 'app-about-page',
