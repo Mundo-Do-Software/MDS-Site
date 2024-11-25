@@ -18,6 +18,16 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '18.20.4'
+        cache: 'npm'
+
+    - name: Install Chrome Headless
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libxss1 libappindicator1 libindicator7 wget
+        wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+        sudo dpkg -i google-chrome-stable_current_amd64.deb
+        sudo apt-get install -f
+        sudo rm google-chrome-stable_current_amd64.deb
 
     - name: Cache Node modules
       uses: actions/cache@v2
@@ -36,4 +46,4 @@ jobs:
     - name: Run Tests
       run: npm test
 
-    # Aqui você pode adicionar etapas adicionais para o deployment
+    # Aqui você pode adicionar etapas adicionais para o deployment, dependendo de onde e como você deseja implantar sua aplicação
