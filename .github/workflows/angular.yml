@@ -35,3 +35,41 @@ jobs:
 
     - name: Deploy and Restart Application
       run: ssh -i ~/.ssh/id_rsa root@${{ secrets.SERVER_IP }} 'pm2 restart AngularApp'
+name: Angular CI/CD Workflow
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18.20.4'
+        cache: 'npm'
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Build Angular Project
+      run: npm run build -- --configuration production
+
+    - name: Prepare SSH environment
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan -H ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
+
+    - name: Deploy Application
+      run: |
+        ssh -i ~/.ssh/id_rsa root@${{ secrets.SERVER_IP }} "cd /root/angular-site && git pull && pm2 restart AngularApp"
