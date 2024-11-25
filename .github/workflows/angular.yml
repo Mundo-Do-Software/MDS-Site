@@ -20,44 +20,8 @@ jobs:
         node-version: '18.20.4'
         cache: 'npm'
 
-    - name: Install Chrome Headless
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y libxss1 libappindicator1 libindicator7 wget
-        wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-        sudo dpkg -i google-chrome-stable_current_amd64.deb
-        sudo apt-get install -f
-        sudo rm google-chrome-stable_current_amd64.deb
-
-    - name: Cache Node modules
-      uses: actions/cache@v2
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
-
     - name: Install Dependencies
       run: npm install
 
     - name: Build Angular Project
       run: npm run build -- --configuration production
-
-    # - name: Run Tests with Xvfb
-    #   run: xvfb-run -a npm test
-
-    - name: Install PM2
-      run: sudo npm install pm2@latest -g
-
-    - name: Setup PM2 to serve the app
-      run: |
-        pm2 start dist/mds-site --name "AngularApp" --watch
-
-    - name: Save PM2 process list
-      run: pm2 save
-
-    - name: Setup startup script
-      run: pm2 startup systemd -u $USER --hp $HOME
-
-    - name: Show PM2 list
-      run: pm2 list
