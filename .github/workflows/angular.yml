@@ -46,4 +46,18 @@ jobs:
     - name: Run Tests with Xvfb
       run: xvfb-run -a npm test
 
-    # Aqui você pode adicionar etapas adicionais para o deployment, dependendo de onde e como você deseja implantar sua aplicação
+    - name: Install PM2
+      run: sudo npm install pm2@latest -g
+
+    - name: Setup PM2 to serve the app
+      run: |
+        pm2 start dist/my-app --name "my-angular-app" --watch
+
+    - name: Save PM2 process list
+      run: pm2 save
+
+    - name: Setup startup script
+      run: pm2 startup systemd -u $USER --hp $HOME
+
+    - name: Show PM2 list
+      run: pm2 list
