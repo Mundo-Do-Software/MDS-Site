@@ -35,4 +35,4 @@ jobs:
 
     - name: Deploy Application
       run: |
-        ssh -i ~/.ssh/id_rsa username@${{ secrets.SERVER_IP }} "cd /path/to/project && git pull && pm2 restart AngularApp"
+        ssh -i ~/.ssh/id_rsa root@${{ secrets.SERVER_IP }} "cd /angular-site && git pull && pm2 restart AngularApp"
