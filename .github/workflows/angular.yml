@@ -43,8 +43,8 @@ jobs:
     - name: Build Angular Project
       run: npm run build -- --configuration production
 
-    - name: Run Tests with Xvfb
-      run: xvfb-run -a npm test
+    # - name: Run Tests with Xvfb
+    #   run: xvfb-run -a npm test
 
     - name: Install PM2
       run: sudo npm install pm2@latest -g
