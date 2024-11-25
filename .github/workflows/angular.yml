@@ -51,7 +51,7 @@ jobs:
 
     - name: Setup PM2 to serve the app
       run: |
-        pm2 start dist/my-app --name "my-angular-app" --watch
+        pm2 start dist/mds-site --name "AngularApp" --watch
 
     - name: Save PM2 process list
       run: pm2 save
