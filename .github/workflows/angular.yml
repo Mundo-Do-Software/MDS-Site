@@ -25,3 +25,8 @@ jobs:
 
     - name: Build Angular Project
       run: npm run build -- --configuration production
+
+    - name: Deploy
+      run: |
+        ssh-keyscan -H ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
+        ssh -i ${{ secrets.SSH_PRIVATE_KEY }} username@${{ secrets.SERVER_IP }} 'pm2 restart AngularApp'
